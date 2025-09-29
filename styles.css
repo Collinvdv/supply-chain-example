@@ -1,0 +1,255 @@
+/*
+ * Stijlbestand voor het portfolio van een logistiek planner.
+ * Flexbox en CSS Grid zorgen voor een modern en responsief ontwerp.
+ */
+
+:root {
+    --color-primary: #0f4c81;
+    --color-secondary: #f2a365;
+    --color-background: #f6f7fb;
+    --color-text: #1f2933;
+    --color-muted: #6b7280;
+    --color-white: #ffffff;
+    --font-heading: "Poppins", "Segoe UI", sans-serif;
+    --font-body: "Inter", "Helvetica Neue", sans-serif;
+    --shadow-md: 0 10px 25px rgba(15, 76, 129, 0.15);
+    --max-width: 1100px;
+}
+
+/* Basisinstellingen voor consistentie */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-primary);
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    padding: 4rem 1.5rem 3rem;
+    background: linear-gradient(120deg, rgba(15, 76, 129, 0.92), rgba(15, 76, 129, 0.75)),
+        url("https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1600&q=80") center/cover;
+    color: var(--color-white);
+}
+
+.hero__text {
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.hero__bio {
+    margin-bottom: 1.5rem;
+}
+
+.hero__contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+.hero__image {
+    justify-self: center;
+}
+
+.hero__image img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.85);
+    box-shadow: var(--shadow-md);
+}
+
+main {
+    flex: 1;
+    padding: 3rem 1.5rem 4rem;
+}
+
+.section {
+    max-width: var(--max-width);
+    margin: 0 auto 4rem;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section__header h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.section__header p {
+    color: var(--color-muted);
+    margin-top: 0.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    border-radius: 16px;
+    padding: 1.75rem;
+    background: linear-gradient(160deg, rgba(242, 163, 101, 0.2), rgba(15, 76, 129, 0.08));
+    border: 1px solid rgba(15, 76, 129, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(15, 76, 129, 0.2);
+}
+
+.card h3 {
+    font-family: var(--font-heading);
+    margin-top: 0;
+}
+
+.card__meta {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.section--skills .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill {
+    padding: 1.5rem;
+    border-radius: 14px;
+    background-color: rgba(15, 76, 129, 0.05);
+    border: 1px solid rgba(15, 76, 129, 0.12);
+}
+
+.skill h3 {
+    font-family: var(--font-heading);
+    margin-top: 0;
+}
+
+.section--contact {
+    background: linear-gradient(160deg, rgba(15, 76, 129, 0.1), rgba(242, 163, 101, 0.2));
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+textarea {
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(31, 41, 51, 0.18);
+    font: inherit;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid rgba(15, 76, 129, 0.4);
+    outline-offset: 2px;
+}
+
+.button {
+    justify-self: start;
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(15, 76, 129, 0.18);
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 1.5rem 3rem;
+    color: var(--color-muted);
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* Responsieve aanpassingen voor kleinere schermen */
+@media (max-width: 600px) {
+    .hero {
+        padding: 3rem 1.25rem 2.5rem;
+    }
+
+    .hero__image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section {
+        padding: 2rem 1.5rem;
+    }
+}
