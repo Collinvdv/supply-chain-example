@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Sara de Vries - Logistiek Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Hoofdcontainer voor de volledige pagina -->
+    <div class="page-wrapper">
+        <header class="hero" id="top">
+            <div class="hero__text">
+                <h1>Sara de Vries</h1>
+                <p class="hero__subtitle">Logistiek Planner</p>
+                <p class="hero__bio">
+                    Ik optimaliseer logistieke processen door data, teamcoördinatie en een gezonde dosis
+doortastendheid te combineren. Met ruim vijf jaar ervaring in de supply chain zorg ik voor
+                    stipte leveringen en tevreden klanten.
+                </p>
+                <div class="hero__contact">
+                    <a href="mailto:sara.devries@email.com">sara.devries@email.com</a>
+                    <span>|</span>
+                    <a href="tel:+31612345678">+31 6 12345678</a>
+                    <span>|</span>
+                    <a href="#contact">Contactformulier</a>
+                </div>
+            </div>
+            <div class="hero__image">
+                <!-- Plaatshouderafbeelding. Vervang het pad door een echte foto naar keuze. -->
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="Portret van Sara de Vries" />
+            </div>
+        </header>
+
+        <main>
+            <section class="section" id="ervaring">
+                <div class="section__header">
+                    <h2>Werkervaring &amp; Projecten</h2>
+                    <p>Een selectie van recente projecten waar ik trots op ben.</p>
+                </div>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Implementatie Transport Management Systeem</h3>
+                        <span class="card__meta">Logistics4U &bull; 2023</span>
+                        <p>
+                            Leidde de implementatie van een nieuw TMS waardoor realtime tracking en automatische
+                            route-optimalisatie mogelijk werden. Resultaat: 18% lagere transportkosten en een
+                            klanttevredenheidsscore van 9,1.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Cross-dock optimalisatie</h3>
+                        <span class="card__meta">Global Freight &bull; 2022</span>
+                        <p>
+                            Herstructureerde de cross-dockplanning met behulp van LEAN-methodieken. Doorlooptijden
+                            daalden met 25% en wachttijden voor chauffeurs verminderden drastisch.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Voorraadtransparantie project</h3>
+                        <span class="card__meta">SupplyChain Co. &bull; 2021</span>
+                        <p>
+                            Coördineerde een multidisciplinair team om een dashboard voor voorraadniveaus te
+                            ontwikkelen. Hierdoor werd de backorder-rate met 12% teruggebracht.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section section--skills" id="vaardigheden">
+                <div class="section__header">
+                    <h2>Vaardigheden</h2>
+                    <p>Een overzicht van mijn belangrijkste competenties.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <h3>Operationele planning</h3>
+                        <p>Dagelijkse coördinatie van transporten en magazijnprocessen.</p>
+                    </div>
+                    <div class="skill">
+                        <h3>Data-analyse</h3>
+                        <p>Excel, Power BI en SQL voor vraagvoorspellingen en KPI-rapportages.</p>
+                    </div>
+                    <div class="skill">
+                        <h3>Stakeholdermanagement</h3>
+                        <p>Nauwe samenwerking met klanten, leveranciers en interne teams.</p>
+                    </div>
+                    <div class="skill">
+                        <h3>Continuous improvement</h3>
+                        <p>LEAN, Kaizen en Six Sigma principes voor procesoptimalisatie.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--contact" id="contact">
+                <div class="section__header">
+                    <h2>Contact</h2>
+                    <p>Stuur een bericht en ik neem zo snel mogelijk contact met je op.</p>
+                </div>
+                <!-- Simpel contactformulier zonder backend. Kan met bijv. Formspree worden gekoppeld. -->
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Naam</label>
+                        <input type="text" id="name" name="name" placeholder="Je naam" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mailadres</label>
+                        <input type="email" id="email" name="email" placeholder="naam@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Bericht</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Waarmee kan ik je helpen?" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Verstuur bericht</button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; <span id="year"></span> Sara de Vries. Alle rechten voorbehouden.</p>
+            <a class="back-to-top" href="#top">Terug naar boven &uarr;</a>
+        </footer>
+    </div>
+
+    <script>
+        // Update dynamisch het jaar in de footer zodat dit altijd actueel is.
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
