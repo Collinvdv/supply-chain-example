@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Sara de Vries - Logistiek Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="hero hero--compact" id="top">
+            <div class="hero__text">
+                <h1>Neem contact op</h1>
+                <p class="hero__subtitle">Ik hoor graag van je</p>
+                <p class="hero__bio">
+                    Laat een bericht achter via het formulier of kies een directe contactmethode.
+                </p>
+                <div class="hero__contact">
+                    <a href="mailto:sara.devries@email.com">sara.devries@email.com</a>
+                    <span>|</span>
+                    <a href="tel:+31612345678">+31 6 12345678</a>
+                    <span>|</span>
+                    <a href="index.html">Terug naar portfolio</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section section--contact">
+                <div class="section__header">
+                    <h2>Contactformulier</h2>
+                    <p>Vul je gegevens in en ik neem zo snel mogelijk contact met je op.</p>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Naam</label>
+                        <input type="text" id="name" name="name" placeholder="Je naam" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mailadres</label>
+                        <input type="email" id="email" name="email" placeholder="naam@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Bericht</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Waarmee kan ik je helpen?" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Verstuur bericht</button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; <span id="year"></span> Sara de Vries. Alle rechten voorbehouden.</p>
+            <a class="back-to-top" href="#top">Terug naar boven &uarr;</a>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
